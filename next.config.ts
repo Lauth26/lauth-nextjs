@@ -13,7 +13,12 @@ const nextConfig: NextConfig = {
         hostname: "secure.gravatar.com",
         pathname: "/avatar/**",
       },
+      {
+        protocol: "https",
+        hostname: "i0.wp.com",
+      },
     ],
+    unoptimized: true,
   },
 
   async redirects() {
