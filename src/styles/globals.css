@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #212838;
+  --color-navy-50: #f0f1f4;
+  --color-navy-100: #d4d7de;
+  --color-navy-200: #a9afc0;
+  --color-navy-300: #7e87a1;
+  --color-navy-400: #535f83;
+  --color-navy-500: #212838;
+  --color-navy-600: #1b2130;
+  --color-navy-700: #161a27;
+  --color-navy-800: #10131e;
+  --color-navy-900: #0a0c14;
+
+  --color-gold: #FFBA60;
+  --color-gold-50: #fff8ee;
+  --color-gold-100: #ffedcc;
+  --color-gold-200: #ffdb99;
+  --color-gold-300: #ffca66;
+  --color-gold-400: #FFBA60;
+  --color-gold-500: #e6a050;
+  --color-gold-600: #cc8e40;
+  --color-gold-700: #997030;
+  --color-gold-800: #665020;
+  --color-gold-900: #332810;
+
+  --color-dark: #0F0F0F;
+  --color-dark-50: #e6e6e6;
+  --color-dark-100: #b3b3b3;
+  --color-dark-200: #808080;
+  --color-dark-300: #4d4d4d;
+  --color-dark-400: #1a1a1a;
+  --color-dark-500: #0F0F0F;
+
+  --font-inter: var(--font-inter);
+  --font-roboto: var(--font-roboto);
+  --font-roboto-slab: var(--font-roboto-slab);
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-inter), sans-serif;
+  background-color: #0F0F0F;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(255, 186, 96, 0.3);
+  color: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F0F0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #212838;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #535f83;
+}
+
+/* Blog prose styling */
+.prose-lauth {
+  --tw-prose-body: #d4d7de;
+  --tw-prose-headings: #ffffff;
+  --tw-prose-lead: #a9afc0;
+  --tw-prose-links: #FFBA60;
+  --tw-prose-bold: #ffffff;
+  --tw-prose-counters: #7e87a1;
+  --tw-prose-bullets: #FFBA60;
+  --tw-prose-hr: #212838;
+  --tw-prose-quotes: #FFBA60;
+  --tw-prose-quote-borders: #FFBA60;
+  --tw-prose-captions: #7e87a1;
+  --tw-prose-kbd: #ffffff;
+  --tw-prose-code: #FFBA60;
+  --tw-prose-pre-code: #d4d7de;
+  --tw-prose-pre-bg: #212838;
+  --tw-prose-th-borders: #535f83;
+  --tw-prose-td-borders: #212838;
+}
+
+/* Gold accent underline for headings */
+.gold-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.gold-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #FFBA60;
+}
+
+/* Animate on scroll utility */
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
