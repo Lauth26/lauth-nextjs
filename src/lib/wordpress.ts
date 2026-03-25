@@ -258,7 +258,7 @@ export async function getAllPostsForSitemap(): Promise<
 
 // --- Transform helpers ---
 
-function transformPost(post: WPPost): BlogPost {
+export function transformPost(post: WPPost): BlogPost {
   const embedded = post._embedded;
   const author = embedded?.author?.[0];
   const media = embedded?.["wp:featuredmedia"]?.[0];
