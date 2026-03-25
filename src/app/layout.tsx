@@ -3,6 +3,8 @@ import { Inter, Roboto, Roboto_Slab } from "next/font/google";
 import "@/styles/globals.css";
 import { COMPANY } from "@/lib/constants";
 import { organizationSchema, websiteSchema } from "@/lib/metadata";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -103,9 +105,9 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-dark text-white font-inter antialiased">
-        {/* Header will be added in Phase 2 */}
-        <main>{children}</main>
-        {/* Footer will be added in Phase 2 */}
+        <Header />
+        <main id="content">{children}</main>
+        <Footer />
       </body>
     </html>
   );
