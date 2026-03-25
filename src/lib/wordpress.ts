@@ -39,7 +39,7 @@ async function fetchAPI<T>(
 
 export async function getPosts(
   page = 1,
-  perPage = WP_CONFIG.postsPerPage
+  perPage: number = WP_CONFIG.postsPerPage
 ): Promise<PaginatedResponse<BlogPost>> {
   const { data, totalPages, total } = await fetchAPI<WPPost[]>("posts", {
     page,
