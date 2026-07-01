@@ -298,7 +298,7 @@ export function transformPost(post: WPPost): BlogPost {
   };
 }
 
-function decodeHTMLEntities(text: string): string {
+export function decodeHTMLEntities(text: string): string {
   return text
     .replace(/&#8217;/g, "'")
     .replace(/&#8216;/g, "'")
